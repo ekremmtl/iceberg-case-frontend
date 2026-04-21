@@ -102,6 +102,8 @@
       <main class="flex-1 overflow-y-auto bg-white p-4 md:p-8">
         <slot />
       </main>
+
+      <AppFooter />
     </div>
   </div>
 
