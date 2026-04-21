@@ -13,12 +13,14 @@ function getToken(): string | null {
   return localStorage.getItem("iceberg_auth_token");
 }
 
-const BASE_URL =
-  (import.meta.env.NUXT_PUBLIC_API_BASE_URL as string | undefined) ||
-  "http://localhost:3000";
+export let apiBaseUrl = "http://localhost:3000";
+
+export function setApiBaseUrl(url: string) {
+  apiBaseUrl = url;
+}
 
 async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
-  const base = BASE_URL;
+  const base = apiBaseUrl;
 
   const token = getToken();
   const headers: Record<string, string> = {
