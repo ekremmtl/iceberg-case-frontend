@@ -1,6 +1,5 @@
 <template>
   <div class="flex h-screen overflow-hidden bg-white">
-    <!-- Mobile/tablet overlay -->
     <Transition name="fade">
       <div
         v-if="sidebarOpen"
@@ -9,7 +8,6 @@
       />
     </Transition>
 
-    <!-- Sidebar -->
     <aside
       class="fixed inset-y-0 left-0 z-30 w-60 flex-shrink-0 bg-black flex flex-col transition-transform duration-200 lg:translate-x-0 lg:static lg:z-auto"
       :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full'"
@@ -17,11 +15,7 @@
       <div
         class="flex items-center justify-between pr-2 py-2 border-b border-white/10"
       >
-        <img
-          src="~/assets/images/logo.png"
-          alt="Iceberg Case"
-          class="h-12 w-auto object-contain"
-        />
+        <AppLogo size="md" />
         <div class="flex items-center gap-0.5">
           <button
             @click="setLocale('tr')"
@@ -90,9 +84,7 @@
       </div>
     </aside>
 
-    <!-- Main content -->
     <div class="flex-1 flex flex-col min-w-0 lg:ml-0">
-      <!-- Mobile/tablet top header -->
       <header
         class="lg:hidden flex items-center px-4 h-14 bg-black border-b border-white/10 flex-shrink-0"
       >
@@ -104,11 +96,7 @@
           <X v-else class="w-5 h-5" />
         </button>
 
-        <img
-          src="~/assets/images/logo.png"
-          alt="Iceberg Case"
-          class="h-9 w-auto object-contain"
-        />
+        <AppLogo size="sm" />
       </header>
 
       <main class="flex-1 overflow-y-auto bg-white p-4 md:p-8">

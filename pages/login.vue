@@ -2,11 +2,7 @@
   <div class="w-full max-w-md px-4">
     <div class="border border-white/20 rounded-lg p-6 bg-black">
       <div class="mb-4 border-b border-white/20 pb-4">
-        <img
-          src="~/assets/images/logo.png"
-          alt="Iceberg Case"
-          class="h-14 w-auto mx-auto"
-        />
+        <AppLogo size="lg" class="mx-auto" />
       </div>
 
       <form @submit.prevent="handleLogin" class="space-y-4">

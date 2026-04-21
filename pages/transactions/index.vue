@@ -9,7 +9,6 @@
       </NuxtLink>
     </PageHeader>
 
-    <!-- Stage filter -->
     <div class="flex flex-wrap gap-2 mb-6">
       <button
         v-for="f in filters"
