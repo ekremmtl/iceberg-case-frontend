@@ -46,6 +46,18 @@ export default defineNuxtConfig({
           href: "https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap",
         },
       ],
+      script: [
+        {
+          src: "https://www.googletagmanager.com/gtag/js?id=G-2JJ9XHX1NR",
+          async: true,
+        },
+        {
+          innerHTML: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2JJ9XHX1NR');`,
+        },
+      ],
     },
   },
 
