@@ -13,14 +13,10 @@ function getToken(): string | null {
   return localStorage.getItem("iceberg_auth_token");
 }
 
-export let apiBaseUrl = "http://localhost:3000";
-
-export function setApiBaseUrl(url: string) {
-  apiBaseUrl = url;
-}
+const apiBaseUrl = "/api";
 
 async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
-  const base = apiBaseUrl;
+  const base = import.meta.server ? "" : apiBaseUrl;
 
   const token = getToken();
   const headers: Record<string, string> = {
