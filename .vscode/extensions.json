@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "Vue.volar"
+  ],
+  "unwantedRecommendations": [
+    "octref.vetur",
+    "sdras.vue-vscode-extensionpack",
+    "hollowtree.vue-snippets"
+  ]
+}
